@@ -215,6 +215,13 @@ video::-webkit-media-controls {
   width: 100%;
 }
 
+.img-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 180px;
+  margin-top: 20px;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 180px;
