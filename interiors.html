@@ -8,25 +8,32 @@
 	</head>
 	<body class="is-preload">
 <!-- Mccabe Logo -->
-<a
-  href="/index.html"
+<div
   style="
     position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2147483647;
+    pointer-events: none;
   "
 >
-  <img
-    src="images/mccabelogo.png"
-    alt="Home"
+  <a
+    href="index.html"
     style="
-      height: 40px;
-      cursor: pointer;
+      display: block;
+      width: fit-content;
+      margin: 10px auto;
+      pointer-events: auto;
     "
-  />
-</a>
+  >
+    <img
+      src="images/mccabelogo.png"
+      alt="Home"
+      style="height: 36px; display: block;"
+    />
+  </a>
+</div>
 
 		<!-- One -->
 			<section id="one" class="main special">
