@@ -149,6 +149,28 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    (function() {
+        var isMobile = window.matchMedia('(max-width: 980px)').matches
+            || window.matchMedia('(pointer: coarse)').matches
+            || window.matchMedia('(hover: none)').matches
+            || 'ontouchstart' in window
+            || navigator.maxTouchPoints > 0;
+
+        if (!isMobile) return;
+
+        var logo = document.querySelector('.logo-wrapper');
+        if (!logo) return;
+
+        logo.style.position = 'static';
+        logo.style.transform = 'none';
+        logo.style.top = '';
+        logo.style.left = '';
+        logo.style.width = 'auto';
+        logo.style.margin = '10px auto';
+        logo.style.display = 'block';
+    })();
+</script>
 
 </body>
 </html>
