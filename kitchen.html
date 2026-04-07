@@ -166,13 +166,7 @@
         var firstSection = document.querySelector('#one .content');
         if (firstSection) {
             firstSection.insertBefore(logo, firstSection.firstChild);
-            logo.style.position = 'static';
-            logo.style.transform = 'none';
-            logo.style.top = '';
-            logo.style.left = '';
-            logo.style.width = 'auto';
-            logo.style.margin = '10px auto';
-            logo.style.display = 'block';
+            logo.style.cssText = 'position: static !important; transform: none !important; top: auto !important; left: auto !important; width: auto !important; margin: 10px auto !important; display: block !important;';
         }
     })();
 </script>
