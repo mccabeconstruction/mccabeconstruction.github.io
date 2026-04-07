@@ -18,7 +18,7 @@
             backdrop-filter: blur(4px);
         }
 
-        @media screen and (max-width: 980px), screen and (hover: none), screen and (pointer: coarse) {
+        @media screen and (max-width: 736px) {
             .logo-wrapper {
                 position: static !important;
                 transform: none !important;
@@ -28,16 +28,6 @@
                 width: auto !important;
                 display: block !important;
             }
-        }
-
-        html.is-touch .logo-wrapper {
-            position: static !important;
-            transform: none !important;
-            top: auto !important;
-            left: auto !important;
-            margin: 10px auto !important;
-            width: auto !important;
-            display: block !important;
         }
     </style>
 </head>
@@ -158,15 +148,22 @@
             || 'ontouchstart' in window
             || navigator.maxTouchPoints > 0;
 
+        console.log('isMobile:', isMobile);
+
         if (!isMobile) return;
 
         var logo = document.querySelector('.logo-wrapper');
+        console.log('logo found:', !!logo);
+
         if (!logo) return;
 
         // Move logo into the first section's content to make it scroll with the page
         var firstSection = document.querySelector('#one .content');
+        console.log('firstSection found:', !!firstSection);
+
         if (firstSection) {
             firstSection.insertBefore(logo, firstSection.firstChild);
+            console.log('logo moved');
         }
     })();
 </script>
