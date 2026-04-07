@@ -127,6 +127,12 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script>
+    // Disable mobile mode to always serve desktop site
+    if (window.browser) {
+        window.browser.mobile = false;
+    }
+</script>
 <script src="assets/js/main.js"></script>
 
 </body>
