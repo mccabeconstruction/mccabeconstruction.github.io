@@ -5,17 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        @media screen and (max-width: 736px), (hover: none) and (pointer: coarse) {
+            .logo-wrapper {
+                position: static !important;
+                transform: none !important;
+                top: auto !important;
+                left: auto !important;
+                margin: 10px auto !important;
+                width: auto !important;
+            }
+        }
+    </style>
 </head>
 <body class="is-preload">
 
 <!-- Floating McCabe Logo -->
-<div style="
+<div class="logo-wrapper" style="
     position: fixed;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
-    
     padding: 6px 12px;
     border-radius: 10px;
     pointer-events: none;
@@ -129,4 +140,4 @@
 <script src="assets/js/main.js"></script>
 
 </body>
-</html> 
+</html>
