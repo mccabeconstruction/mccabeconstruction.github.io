@@ -150,6 +150,26 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script>
+    (function() {
+        var isMobile = window.matchMedia('(max-width: 980px)').matches
+            || window.matchMedia('(pointer: coarse)').matches
+            || window.matchMedia('(hover: none)').matches
+            || 'ontouchstart' in window
+            || navigator.maxTouchPoints > 0;
+
+        if (!isMobile) return;
+
+        var logo = document.querySelector('.logo-wrapper');
+        if (!logo) return;
+
+        // Move logo into the first section's content to make it scroll with the page
+        var firstSection = document.querySelector('#one .content');
+        if (firstSection) {
+            firstSection.insertBefore(logo, firstSection.firstChild);
+        }
+    })();
+</script>
 <script src="assets/js/main.js"></script>
 
 </body>
