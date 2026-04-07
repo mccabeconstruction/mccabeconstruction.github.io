@@ -5,34 +5,25 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.logo-wrapper {
+				position: fixed;
+				top: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 9999;
+				padding: 6px 12px;
+				border-radius: 10px;
+				pointer-events: none;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 <!-- Mccabe Logo -->
-<div
-  style="
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2147483647;
-    pointer-events: none;
-  "
->
-  <a
-    href="index.html"
-    style="
-      display: block;
-      width: fit-content;
-      margin: 10px auto;
-      pointer-events: auto;
-    "
-  >
-    <img
-      src="images/mccabelogo.png"
-      alt="Home"
-      style="height: 36px; display: block;"
-    />
-  </a>
+<div class="logo-wrapper">
+	<a href="index.html" style="pointer-events: auto; display: inline-block;">
+		<img src="images/mccabelogo.png" alt="Home" style="height: 36px; display: block;">
+	</a>
 </div>
 
 
