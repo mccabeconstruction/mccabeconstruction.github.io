@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        @media screen and (max-width: 736px), (hover: none) and (pointer: coarse) {
+        @media screen and (max-width: 980px), screen and (hover: none), screen and (pointer: coarse) {
             .logo-wrapper {
                 position: static !important;
                 transform: none !important;
@@ -14,7 +14,18 @@
                 left: auto !important;
                 margin: 10px auto !important;
                 width: auto !important;
+                display: block !important;
             }
+        }
+
+        html.is-touch .logo-wrapper {
+            position: static !important;
+            transform: none !important;
+            top: auto !important;
+            left: auto !important;
+            margin: 10px auto !important;
+            width: auto !important;
+            display: block !important;
         }
     </style>
 </head>
