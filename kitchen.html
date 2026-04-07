@@ -17,18 +17,6 @@
             pointer-events: none;
             backdrop-filter: blur(4px);
         }
-
-        @media screen and (max-width: 736px) {
-            .logo-wrapper {
-                position: static !important;
-                transform: none !important;
-                top: auto !important;
-                left: auto !important;
-                margin: 10px auto !important;
-                width: auto !important;
-                display: block !important;
-            }
-        }
     </style>
 </head>
 <body class="is-preload">
@@ -140,33 +128,6 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
-<script>
-    (function() {
-        var isMobile = window.matchMedia('(max-width: 980px)').matches
-            || window.matchMedia('(pointer: coarse)').matches
-            || window.matchMedia('(hover: none)').matches
-            || 'ontouchstart' in window
-            || navigator.maxTouchPoints > 0;
-
-        console.log('isMobile:', isMobile);
-
-        if (!isMobile) return;
-
-        var logo = document.querySelector('.logo-wrapper');
-        console.log('logo found:', !!logo);
-
-        if (!logo) return;
-
-        // Move logo into the first section's content to make it scroll with the page
-        var firstSection = document.querySelector('#one .content');
-        console.log('firstSection found:', !!firstSection);
-
-        if (firstSection) {
-            firstSection.insertBefore(logo, firstSection.firstChild);
-            console.log('logo moved');
-        }
-    })();
-</script>
 <script src="assets/js/main.js"></script>
 
 </body>
